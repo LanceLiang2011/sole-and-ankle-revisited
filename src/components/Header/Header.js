@@ -57,7 +57,6 @@ const MainHeader = styled.div`
   display: flex;
   align-items: baseline;
   padding: 18px 32px;
-  height: 72px;
   border-bottom: 1px solid ${COLORS.gray[300]};
   @media (${QUERIES.tabletAndSmaller}) {
     border-top: 4px solid ${COLORS.gray[900]};
@@ -65,6 +64,7 @@ const MainHeader = styled.div`
     align-items: center;
     padding-left: 16px;
     padding-right: 16px;
+    overflow: auto;
   }
 
   @media (${QUERIES.phoneAndSmaller}) {
@@ -75,7 +75,7 @@ const MainHeader = styled.div`
 
 const LaptopNav = styled.nav`
   display: flex;
-  gap: 48px;
+  gap: clamp(1rem, 9.2vw - 4.5rem, 3.5rem);
   margin: 0px 48px;
   @media (${QUERIES.tabletAndSmaller}) {
     display: none;
